@@ -67,7 +67,8 @@ combo_##NAME { \
 /{
     combos {
         compatible = "zmk,combos";
-/* alphas */
+/* alphas
+   q, v, z, w, f, p, b, j, m, k, x */
 	             //  0+1    1+2    2+3    3+4    4+5      5+6      6+7
 	COMBOS_TOP_ROW(&kp W, &kp M, &kp B, &kp F, &kp V, &comsem, &dotcol)
 	       COMBOS_BOT_ROW(&kp F, &kp P, &kp J, &kp X, &kp Z)
@@ -82,7 +83,7 @@ combo_##NAME { \
         COMBO(lbrc, &kp LBRC, 1 8)
         COMBO(lbkt, &kp LBKT, 2 9)
         COMBO(lpar, &kp LPAR, 3 10)
-        COMBO(rt, &kp RT, 6 11)
+        COMBO(rt, &kp GT, 6 11)
         COMBO(rpar, &kp RPAR, 4 11)
         COMBO(rbkt, &kp RBKT, 5 12)
         COMBO(rbrc, &kp RBRC, 6 13)
