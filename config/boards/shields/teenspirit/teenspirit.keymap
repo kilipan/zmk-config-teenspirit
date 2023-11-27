@@ -183,7 +183,7 @@ combo_##NAME { \
             label = "NUM";
 
             bindings = <
-                &hl LCTRL PLUS &hl LALT MINUS &hl LGUI STAR  &hl LSHFT SLASH    &kp N4         &kp N5         &kp N6         &kp dotcol
+                &hl LCTRL PLUS &hl LALT MINUS &hl LGUI STAR  &hl LSHFT SLASH    &kp N4         &kp N5         &kp N6         &dotcol
                                &kp N9         &kp N8         &kp N7             &kp N1         &kp N2         &kp N3
                                               &trans         &trans             &kp E          &kp N0
             >;
