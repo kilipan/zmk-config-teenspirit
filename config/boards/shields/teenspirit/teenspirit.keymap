@@ -37,14 +37,14 @@
 	    tap-ms = <10>;
         };
 	// promising candidate, only problem: impossible to hold shift through
-	// the activation an d still have it registered as held afterwards
+	// the activation and still have it registered as held afterwards
         macro_shiftable_sch: macro_shiftable_sch {
             label = "Macro_shiftable_sch";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
                     &macro_tap &kp S
-                    &macro_release &kp LSHIFT
+                    &macro_release &kp RSHIFT
                     &macro_tap &kp C &kp H
             >;
             tap-ms = <10>;
