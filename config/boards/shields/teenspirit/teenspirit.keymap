@@ -19,17 +19,35 @@
 
 / {
     macros {
+	// TODO: the following two macros only needed for mod-morphed sch
+	//       or activation through different combos.
+	// -> remove if unneeded!
         macro_sch: macro_sch {
             label = "Macro_sch";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp S &kp C &kp H>;
+	    tap-ms = <10>;
         };
         macro_shifted_sch: macro_shifted_sch {
             label = "Macro_Sch";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LS(S) &kp C &kp H>;
+	    tap-ms = <10>;
+        };
+	// promising candidate, only problem: impossible to hold shift through
+	// the activation an d still have it registered as held afterwards
+        macro_shiftable_sch: macro_shiftable_sch {
+            label = "Macro_shiftable_sch";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                    &macro_tap &kp S
+                    &macro_release &kp LSHIFT
+                    &macro_tap &kp C &kp H
+            >;
+            tap-ms = <10>;
         };
     };
 };
@@ -75,8 +93,9 @@ combo_##NAME { \
 
 /* usually on base layer */
         COMBO(q, &kp Q, 8 10)
-        COMBO(sch, &macro_sch, 1 3)
-        COMBO(shiftedsch, &macro_shifted_sch, 0 3)
+        COMBO(shiftablesch, &macro_shiftable_sch, 1 3)
+        COMBO(modmorphsch, &modmorphsch, 0 3)
+       /* COMBO(shiftedsch, &macro_shifted_sch, 0 3) */
         COMBO(enter, &kp ENTER, 11 13)
 /* parentheticals */
         COMBO(lt, &kp LT, 1 10)
@@ -162,6 +181,15 @@ combo_##NAME { \
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+	// CAVE: this thing doesn't know about macro execution length,
+	// so might lead to outputs like "ScH" while holding shift
+	modmorphsch: modmorph_sch {
+	    compatible = "zmk,behavior-mod-morph";
+	    label = "MODMORPH SCH";
+	    #binding-cells = <0>;
+	    bindings = <&macro_sch>, <&macro_shifted_sch>;
+	    mods = <(MOD_LSFT|MOD_RSFT)>;
+	}
     };
 };
 
