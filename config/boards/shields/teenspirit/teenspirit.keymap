@@ -189,7 +189,7 @@ combo_##NAME { \
 	    #binding-cells = <0>;
 	    bindings = <&macro_sch>, <&macro_shifted_sch>;
 	    mods = <(MOD_LSFT|MOD_RSFT)>;
-	}
+	};
     };
 };
 
