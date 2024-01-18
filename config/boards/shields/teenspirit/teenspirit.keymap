@@ -42,7 +42,7 @@ combo_##NAME { \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
 };
-#define SLOWCOMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
+#define SLOWCOMBO(NAME, BINDINGS, KEYPOS) \
 combo_##NAME { \
     timeout-ms = <30>; \
     bindings = <BINDINGS>; \
