@@ -92,7 +92,7 @@ combo_##NAME { \
         COMBO(enter, &kp ENTER, 11 13)
 	COMBO(esc, &kp ESC, 0 3)
 	COMBO(colon, &kp COLON, 13 17)
-	COMBO(semi, &kp COLON, 12 17)
+	//COMBO(semi, &kp COLON, 12 17)
 	COMBO(minus, &kp MINUS, 11 12 17)
 	COMBO(slash, &kp SLASH, 12 13 17)
 	COMBO(esc2, &kp ESC, 9 10 14)
