@@ -44,7 +44,7 @@ combo_##NAME { \
 };
 #define SLOWCOMBO(NAME, BINDINGS, KEYPOS) \
 combo_##NAME { \
-    timeout-ms = <30>; \
+    timeout-ms = <40>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
 };
@@ -88,12 +88,14 @@ combo_##NAME { \
 
 /* usually on base layer */
         COMBO(q, &kp Q, 8 10)
+        COMBO(k, &kp K, 14 15)
+        COMBO(j, &kp J, 16 17)
         COMBO(shiftablesch, &macro_shiftable_sch, 1 3)
         COMBO(enter, &kp ENTER, 11 13)
 	COMBO(esc, &kp ESC, 0 3)
+	COMBO(semi, &kp SEMICOLON, 12 17)
 	COMBO(colon, &kp COLON, 13 17)
-	//COMBO(semi, &kp COLON, 12 17)
-	COMBO(minus, &kp MINUS, 11 12 17)
+	cOMBO(minus, &kp MINUS, 11 12 17)
 	COMBO(slash, &kp SLASH, 12 13 17)
 	COMBO(esc2, &kp ESC, 9 10 14)
 /* parentheticals */
