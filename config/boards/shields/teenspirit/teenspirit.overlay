@@ -38,3 +38,12 @@
         >;
     };
 };
+
+// buzzer config copied from sadek baroudi:
+// https://github.com/sadekbaroudi/zmk-fingerpunch-keyboards/blob/main/boards/arm/vulpes_majora_v1/vulpes_majora_v1.dts#L156
+&pwm {
+    status = "okay";
+    pinctrl-0 = <&pwm_ch1a_default>;
+    pinctrl-names = "default";
+    divider-int-0 = <255>;
+};
