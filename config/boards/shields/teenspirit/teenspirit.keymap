@@ -182,6 +182,14 @@ combo_##NAME { \
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // buzzer config, copied from sadek baroudi:
+        // https://github.com/sadekbaroudi/zmk-fingerpunch-keyboards/blob/main/boards/arm/vulpes_majora_v1/vulpes_majora_v1.keymap#L71
+        tone: tone {
+            compatible = "chiptuner,behavior-tone";
+            #binding-cells = <1>;
+            pwms = <&pwm 2 PWM_USEC(20) PWM_POLARITY_NORMAL>;
+        };
     };
 };
 
