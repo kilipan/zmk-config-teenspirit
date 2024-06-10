@@ -1,0 +1,10 @@
+// for buzzer, copied from sadek baroudi:
+// https://github.com/sadekbaroudi/zmk-fingerpunch-keyboards/blob/main/boards/arm/vulpes_majora_v1/vulpes_majora_v1-pinctl.dtsi
+
+&pinctrl {
+	pwm_ch1a_default: pwm_ch1a_default {
+		group1 {
+			pinmux = <PWM_1A_P18>;
+		};
+	};
+};
