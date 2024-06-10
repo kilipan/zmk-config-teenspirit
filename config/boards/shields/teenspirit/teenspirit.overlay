@@ -1,5 +1,7 @@
+#include <rpi_pico/rp2040.dtsi>
+#include "teenspirit-pinctl.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/pinctrl/rpi-pico-rp2040-pinctrl.h>
+#include <freq.h>
 
 / {
     chosen {
@@ -44,7 +46,7 @@
 // https://github.com/sadekbaroudi/zmk-fingerpunch-keyboards/blob/main/boards/arm/vulpes_majora_v1/vulpes_majora_v1.dts#L156
 &pwm {
     status = "okay";
-    pinctrl-0 = <&pwm_ch1a_default>;
+    pinctrl-0 = <&pwm_ch5a_default>;
     pinctrl-names = "default";
     divider-int-0 = <255>;
 };
