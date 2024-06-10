@@ -8,6 +8,7 @@
 #define NAV 2
 #define SYM 3
 #define FUN 4
+#define BUZ 5
 
 // &lt {
 //     quick_tap_ms = <170>;
@@ -114,6 +115,8 @@ combo_##NAME { \
         COMBO(bspc, &kp BSPC, 4 6)
         SLOWCOMBO(del, &kp DEL, 5 7)
         COMBO(delword, &kp LC(BSPC), 4 7)
+/* music */
+        SLOWCOMBO(music, &tog BUZ, 0, 7, 14, 17)
     };
 };
 
@@ -241,6 +244,14 @@ combo_##NAME { \
                 &bootloader    &kp F12        &kp F11        &kp F10            &kp F4         &kp F5         &kp F6         &none
                                &kp F9         &kp F8         &kp F7             &kp F1         &kp F2         &kp F3
                                               &trans         &trans             &trans         &trans
+            >;
+        };
+        buzz {
+            label = "BUZ";
+            bindings = <
+                &tone 1245     &tone 1109     &tone 932      &tone 831          &tone 784      &tone 880      &tone 988      &tone 1047
+                               &tone 740      &tone 622      &tone 554          &tone 587      &tone 659      &tone 698
+                                              &tone 220      &tone 262          &tone 523      &tone 440
             >;
         };
 
