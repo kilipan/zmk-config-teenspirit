@@ -15,5 +15,5 @@
 include:
   - board: seeeduino_xiao_rp2040
     shield: teenspirit
-  - board: seeeduino_xiao_ble
-    shield: teenspirit
+  # - board: seeeduino_xiao_ble
+  #   shield: teenspirit
