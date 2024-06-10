@@ -116,7 +116,7 @@ combo_##NAME { \
         SLOWCOMBO(del, &kp DEL, 5 7)
         COMBO(delword, &kp LC(BSPC), 4 7)
 /* music */
-        SLOWCOMBO(music, &tog BUZ, 0, 7, 14, 17)
+        SLOWCOMBO(music, &tog BUZ, 0 7 14 17)
     };
 };
 
