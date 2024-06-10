@@ -191,7 +191,7 @@ combo_##NAME { \
         tone: tone {
             compatible = "chiptuner,behavior-tone";
             #binding-cells = <1>;
-            pwms = <&pwm 2 PWM_USEC(20) PWM_POLARITY_NORMAL>;
+            pwms = <&pwm 10 PWM_USEC(20) PWM_POLARITY_NORMAL>;
         };
     };
 };

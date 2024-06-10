@@ -6,8 +6,8 @@
         group1 {
             pinmux = <PWM_5A_P26>;
         };
-		group2 {
-		    pinmux = <PWM_6A_P28>;
-		};
+		// group2 {
+		//     pinmux = <PWM_6A_P28>;
+		// };
     };
 };
