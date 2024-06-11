@@ -235,7 +235,7 @@ combo_##NAME { \
             bindings = <
                 &kp EXCL       &kp AT         &kp HASH       &kp DOLLAR         &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp CARET
                                &kp GRAVE      &kp DQT        &kp UNDERSCORE     &kp BACKSLASH  &kp PIPE       &kp EQUAL
-                                              &kp TILDE      &trans             &trans         &trans
+                                              &kp TILDE      &tone 4400         &trans         &tone 440
             >;
         };
         function {
