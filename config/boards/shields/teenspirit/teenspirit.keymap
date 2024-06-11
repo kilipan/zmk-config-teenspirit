@@ -250,7 +250,7 @@ combo_##NAME { \
         buzz {
             label = "BUZ";
             bindings = <
-                &tone 1245     &tone 1109     &tone 932      &tone 831          &tone 784      &tone 880      &tone 988      &kp q
+                &tone 1245     &tone 1109     &tone 932      &tone 831          &tone 784      &tone 880      &tone 988      &kp Q
                                &tone 740      &tone 622      &tone 554          &tone 587      &tone 659      &tone 698
                                               &tone 220      &tone 262          &tone 523      &tone 440
             >;
