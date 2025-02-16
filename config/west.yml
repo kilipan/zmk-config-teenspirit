@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
+    - name: kilipan
+      url-base: https://github.com/kilipan
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: chiptuner-zmk-module
-      remote: petejohanson
+    - name: zmk-keyboards-teenspirit
+      remote: kilipan
       revision: main
   self:
     path: config
